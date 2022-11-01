@@ -50,20 +50,93 @@
   justify-content: right;
 }
 
-.navbar-style-2 {
+nav .nav-style-1 {
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  background-color: var(--dark);
+  padding: 16px 32px;
+  border-bottom: 3px solid var(--primary);
+}
+nav .nav-style-1 .cont {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav .nav-style-1 h1 {
+  color: #fff;
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+nav .nav-style-1 .menu {
+  display: none;
+  flex: 1 1 0%;
+  justify-content: flex-end;
+  margin: 0 -16px;
+}
+nav .nav-style-1 .menu a {
+  color: #fff;
+  margin: 0 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.4s;
+  padding: 8px 16px;
+  border-radius: 99px;
+}
+nav .nav-style-1 .menu a.active, nav .nav-style-1 .menu a:hover {
+  background-color: var(--primary);
+}
+@media (min-width: 768px) {
+  nav .nav-style-1 .hamburger {
+    display: none;
+  }
+  nav .nav-style-1 .menu {
+    display: flex;
+  }
+}
+@media (max-width: 768px) {
+  nav .nav-style-1 .menu {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100vw;
+    min-height: 100vh;
+    display: block;
+    z-index: 1;
+    background-color: var(--dark);
+    padding-top: 120px;
+    margin: 0;
+    transition: 0.4s;
+  }
+  nav .nav-style-1 .menu a {
+    display: block;
+    text-align: center;
+    margin-bottom: 16px;
+    padding: 12px 16px;
+  }
+  nav .nav-style-1 .menu.active {
+    left: 0;
+  }
+}
+nav .sidebar-style-1 {
   top: 0;
   left: 0;
   right: 0;
   z-index: 99;
   padding: 16px 32px;
 }
-.navbar-style-2 .cont {
+nav .sidebar-style-1 .cont {
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: end;
 }
-.navbar-style-2 .menu {
+nav .sidebar-style-1 .menu {
   flex: 1 1 0%;
   justify-content: flex-end;
   margin: 0 -16px;
@@ -79,7 +152,7 @@
   margin: 0;
   transition: 0.4s;
 }
-.navbar-style-2 .menu a {
+nav .sidebar-style-1 .menu a {
   color: #fff;
   margin: 0 16px;
   font-weight: 600;
@@ -91,99 +164,25 @@
   margin-bottom: 16px;
   padding: 12px 16px;
 }
-.navbar-style-2 .menu a.active, .navbar-style-2 .menu a:hover {
+nav .sidebar-style-1 .menu a.active, nav .sidebar-style-1 .menu a:hover {
   background-color: var(--primary);
 }
-.navbar-style-2 .menu.active {
+nav .sidebar-style-1 .menu.active {
   left: 80vw;
 }
 @media (max-width: 1240px) {
-  .navbar-style-2 .menu {
+  nav .sidebar-style-1 .menu {
     width: 40vw;
   }
-  .navbar-style-2 .menu.active {
+  nav .sidebar-style-1 .menu.active {
     left: 60vw;
   }
 }
 @media (max-width: 768px) {
-  .navbar-style-2 .menu {
+  nav .sidebar-style-1 .menu {
     width: 100vw;
   }
-  .navbar-style-2 .menu.active {
-    left: 0;
-  }
-}
-
-.navbar-style-1 {
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 99;
-  background-color: var(--dark);
-  padding: 16px 32px;
-  border-bottom: 3px solid var(--primary);
-}
-.navbar-style-1 .cont {
-  max-width: 1280px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.navbar-style-1 h1 {
-  color: #fff;
-  font-size: 28px;
-  font-weight: 900;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-.navbar-style-1 .menu {
-  display: none;
-  flex: 1 1 0%;
-  justify-content: flex-end;
-  margin: 0 -16px;
-}
-.navbar-style-1 .menu a {
-  color: #fff;
-  margin: 0 16px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: 0.4s;
-  padding: 8px 16px;
-  border-radius: 99px;
-}
-.navbar-style-1 .menu a.active, .navbar-style-1 .menu a:hover {
-  background-color: var(--primary);
-}
-@media (min-width: 768px) {
-  .navbar-style-1 .hamburger {
-    display: none;
-  }
-  .navbar-style-1 .menu {
-    display: flex;
-  }
-}
-@media (max-width: 768px) {
-  .navbar-style-1 .menu {
-    position: fixed;
-    top: 0;
-    left: 100%;
-    width: 100vw;
-    min-height: 100vh;
-    display: block;
-    z-index: 1;
-    background-color: var(--dark);
-    padding-top: 120px;
-    margin: 0;
-    transition: 0.4s;
-  }
-  .navbar-style-1 .menu a {
-    display: block;
-    text-align: center;
-    margin-bottom: 16px;
-    padding: 12px 16px;
-  }
-  .navbar-style-1 .menu.active {
+  nav .sidebar-style-1 .menu.active {
     left: 0;
   }
 }
